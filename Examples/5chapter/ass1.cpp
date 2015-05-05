@@ -3,12 +3,45 @@
 using namespace std;
 
 class Yuebao{
-
-    static double profitRate;
+    private:
+        static double profitRate;
+        double money;
     public:
-        static void setProfitRate(double rate);
-
+        Yuebao(double m):money(0){}
+        //Yuebao(Yuebao &yb)
+        ~Yuebao(){}
+        static void setProfitRate(double rate){
+            
+            profitRate = rate;
+        }
+        double getBalance();
+        void deposit(double amount);
+        void withdraw(double amount);
+        void addProfit();
 };
+double Yuebao::profitRate = 0;
+//static void Yuebao::setProfitRate(double rate){
+
+//    profitRate = rate;
+//}
+
+double Yuebao::getBalance(){
+
+    return money;
+}
+void Yuebao::deposit(double amount){
+
+    money += amount;
+}
+void Yuebao::withdraw(double amount){
+    
+    money -= amount;
+}
+void Yuebao::addProfit(){
+       
+    money = money*(1+profitRate);
+}
+
 
 int main(){
     int n;
