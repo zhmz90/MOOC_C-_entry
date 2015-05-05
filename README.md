@@ -1,2 +1,3 @@
-# MOOC_C-_entry
-TsinghuaX: 00740043X C++语言程序设计基础
+This is my repo which stores my answers to assignments of a C++ courese in Xuetangzaixian.
+
+You probably will not be interest on it.
